@@ -1,3 +1,3 @@
 module PauboxRails
-  VERSION = "0.2.8"
+  VERSION = "0.2.12.3025.hotfix"
 end
