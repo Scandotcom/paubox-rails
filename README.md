@@ -6,6 +6,17 @@ This gem extends the [Paubox Ruby Gem](https://github.com/paubox/paubox_ruby) fo
 
 The Paubox Email API allows your application to send secure, HIPAA compliant email via Paubox and track deliveries and opens.
 
+## Scan.com fork
+
+The gem is essentially abandonware, with the last (minor) updates occurring 4 years ago. We seem to rely on it and have
+to use a hotfix branch (hotfix/PAUB-3205_secure_contact_broken_attachments) to make it work. This is causing problems
+with gems that are installed via our private Github rubygems repo. To wit, the Personal Authentication Token (PAT)
+needed to pull gems from our packages repo seem to stop bundler from downloading and buliding the gem from Paubox repo.
+
+To fix this problem, I have forked the original repo, rebased the hotfix into `master`, built the gem and pushed it to
+our github rubygems. I'm going to try and make it public, as that is how we use it now. I will update this once I know
+the outcome.
+
 ## Compatibility
 This gem has been tested and confirmed working with Rails 4-6
 
